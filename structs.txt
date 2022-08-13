@@ -181,6 +181,7 @@ struct InterList {
 
 //---------------------------------
 
+// 0x14    destroyable walls n stuff
 struct ObjDestroyable {
     int f_00_hp;
     char * f_04_snd_name;
@@ -207,13 +208,15 @@ struct BulletProjectile {
     struct SVec3 f40_hit_cp;
 };
 
+
+// 0x48  - machine guns
 struct ObjBullet {
     struct BulletProjectile f0_proj;
     short f46_dmg;
 };
 
 
-
+// 0x6C
 struct ObjCamera {
     struct MATRIX mtx;
     struct MATRIX mtx2;
@@ -223,7 +226,7 @@ struct ObjCamera {
     void * trg_cam_proc;
 };
 
-
+// 0x30   - glow / flares
 struct ObjAfc {
     short s0_size;
     short s2_size;
@@ -268,7 +271,7 @@ struct ObjTeleporter {
 };
 
 
-// 0x24
+// 0x24  -  health / weapon  pickups
 struct ObjPowerup {
     char * f_00_nam;
     ushort f_04_amount;
@@ -282,4 +285,21 @@ struct ObjPowerup {
     char * snd_name;
     uint disp_rel;
 };
+
+// 0x2C   - delayed func call
+struct ObjTimer {
+    int f0_counter;
+    void * f4_func;
+    int f8_mode;
+    int ca_arg0;
+    int ca_arg1;
+    int ca_arg2;
+    int ca_arg3;
+    int * ptr_to_unk1;
+    int * ptr_to_unk2;
+    int * ptr_to_unk3;
+    int f_28_dunno;
+};
+
+
 
