@@ -303,3 +303,27 @@ struct ObjTimer {
 
 
 
+// 0xC0   pieces of destroyed walls
+struct ObjFragment {
+    struct SVECTOR f_08_pp;
+    struct Vec3 f_08_vc;
+    struct Vec3 f_14_some_vec;
+    int f_20_unk1;
+    struct SVECTOR f_24_maybe_verts[4];
+    struct MATRIX f_44_mtx;
+    int f_64_raycast_delay;
+    int f_68_u1;
+    int f_6c;
+    int f_70;
+    int f_74;
+    int f_78;
+    int f_7c;
+    int f_80;
+    int f_84;
+    int f_88;
+    int f_8c_i;
+    u_char f_90_maybe_prim_copy[48];
+};
+
+
+
