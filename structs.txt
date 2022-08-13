@@ -327,3 +327,53 @@ struct ObjFragment {
 
 
 
+// 0x38
+struct ExpDefinition {
+    char * f_00_name;
+    char * f_04_ptr_snd_name;
+    uint * f_08_ptr_clr;
+    void * f_0c_tex;
+    ushort f_10_height;
+    ushort f_12_dmg;
+    ushort f_14_trans;
+    ushort f_16_color_reducer;
+    ushort f_18_rot;
+    ushort f_1a_disp_type;
+    int f_1c_life;
+    int f_20_outer_vel;
+    int f_24_inner_vel;
+    int f_28_friction;
+    int f_2c_force;
+    ushort f_30_num_sides;
+    u_char f_32_freeze;
+    u_char f_33_fire;
+    ushort f_34_ray_check;
+    ushort f_36_collide_check;
+};
+
+
+// 0x44
+struct ObjExplosionShockWave {
+    struct SVECTOR * f_00_allocated_stuff;
+    ushort f_04_height;
+    ushort f_06_dmg;
+    uint * f_08_ptr_clr;
+    int f_0c_life;
+    int f_10_inner_vel;
+    int f_14_outer_vel;
+    int f_18_fric;
+    short f_1c_u10;
+    short f_1e_radius_related;
+    short f_20_dunn;
+    short f_22_u_cnt;
+    int f_24_force;
+    struct InterList f_28_inter_list;
+    struct SVECTOR f_2c_sv_maybe_velocity;
+    int f_34_dunno;
+    char * f_38_ptr_snd_name;
+    void * f_3c_ptr_tex;
+    struct ExpDefinition * f_40_my_def;
+};
+
+
+
