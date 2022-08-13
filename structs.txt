@@ -253,3 +253,33 @@ struct ObjAfc {
     undefined field_0x2f;
 };
 
+
+// 0x40
+struct ObjTeleporter {
+    struct SVECTOR f00_dst_pos;
+    struct SVECTOR f08_dst_dir;
+    struct MATRIX f10_mtx; 
+    short f30_sz;
+    short f32_index_stuff;
+    short f34_angle;
+    short f36_fluct;
+    int f38;
+    uint * f3c_ptr_color;
+};
+
+
+// 0x24
+struct ObjPowerup {
+    char * f_00_nam;
+    ushort f_04_amount;
+    short f_06_unk;
+    ushort f_08_unk2;
+    short f_0a_unk;
+    short f_0c_unk_c;
+    short f_0e_maybe_rot_y;
+    struct SVECTOR sv10;
+    void * f_18_func_interact_car_with_pwr;
+    char * snd_name;
+    uint disp_rel;
+};
+
