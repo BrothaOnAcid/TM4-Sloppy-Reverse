@@ -224,3 +224,32 @@ struct ObjCamera {
 };
 
 
+struct ObjAfc {
+    short s0_size;
+    short s2_size;
+    short s4;
+    short rot;
+    uint clr1;
+    uint clr2;
+    short s10;
+    short s12;
+    short s14;
+    undefined field_0x16;
+    undefined field_0x17;
+    short s18;
+    short s1a;
+    short s1c;
+    undefined field_0x1e;
+    undefined field_0x1f;
+    short s20;
+    short s22;
+    short s24;
+    undefined field_0x26;
+    undefined field_0x27;
+    short s28;
+    short s2a;
+    short s2c;
+    undefined field_0x2e;
+    undefined field_0x2f;
+};
+
