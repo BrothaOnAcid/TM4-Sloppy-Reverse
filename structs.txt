@@ -1,5 +1,13 @@
  
 
+struct MATRIX {
+    short m[3][3];
+    long t[3];
+};
+
+
+
+
 
 // in-memory filesystem (loaded from .MR files)
 
@@ -180,4 +188,39 @@ struct ObjDestroyable {
     struct WorldObjInfo * f_0c_wo_info;
     struct InterList f_10_inter_list;
 };
+
+
+
+
+struct BulletProjectile {
+    char * f0_owned_string;
+    char * f4_str2;
+    struct SVECTOR f8_seg0;
+    struct SVECTOR f10_seg1;
+    short f18_xx;
+    short f1a_yy;
+    short f1c_zz;
+    byte f1e_b;
+    byte f1f_c;
+    struct RayHitRes f20_hit_res;
+    byte * f3c_ptr_obj_juice;
+    struct SVec3 f40_hit_cp;
+};
+
+struct ObjBullet {
+    struct BulletProjectile f0_proj;
+    short f46_dmg;
+};
+
+
+
+struct ObjCamera {
+    struct MATRIX mtx;
+    struct MATRIX mtx2;
+    struct MATRIX mtx3;
+    byte * trg_obj;
+    byte * trg_cam_state;
+    void * trg_cam_proc;
+};
+
 
