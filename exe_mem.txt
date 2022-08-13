@@ -1,0 +1,25 @@
+ 
+80056f38	reg_ptr_root
+ 
+800574bc	obj_list_ar		
+ 
+80057500	sq_linkage_related
+ 
+80057508	ptr_obj_types
+ 
+8005750c	obj_types_num
+ 
+80057510    interact_func_table
+ 
+800593dc	col_polys
+ 
+800593e4	col_index_data
+ 
+800593f4    ptr world vert data
+800593f8    ptr world disp face data
+
+80059404	ptr world square data
+
+8005a290   gamestate start
+
+
