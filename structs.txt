@@ -157,3 +157,27 @@ struct WoColPolyInfo {
     void * ptr8;
 };
 
+
+struct InterListElem {
+    void * ptr_obj_juice;
+    uint time;
+    struct InterListElem * next;
+};
+
+
+struct InterList {
+    struct InterListElem * p_start;
+};
+
+
+
+//---------------------------------
+
+struct ObjDestroyable {
+    int f_00_hp;
+    char * f_04_snd_name;
+    struct RegDir * f_08_my_dir;
+    struct WorldObjInfo * f_0c_wo_info;
+    struct InterList f_10_inter_list;
+};
+
