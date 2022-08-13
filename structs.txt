@@ -1,0 +1,159 @@
+ 
+
+
+// in-memory filesystem (loaded from .MR files)
+
+struct RegDir {
+    byte b0;
+    sbyte b1;
+    ushort cnt;
+    struct RegFile * ch_files;
+    struct RegDir * ch_dirs;
+    struct RegDir * next;
+    char nam[4]; // variable size
+};
+
+struct RegFile {
+    sbyte b0;
+    sbyte b1;
+    ushort cnt;
+    struct RegFile * next;
+    char nam[4]; // variable size
+};
+
+
+
+
+
+// in-game OBJECT 'class' descriptor
+
+struct ObjTyInfo {
+    char * nam;
+    int size;
+    struct RegDir * my_dir;
+    void * func_class_ctor;
+    void * mb_func_10;
+    void * func_proc;
+    int dunno18;
+    void * func_on_destr;
+};
+
+
+// in-game object INSTANCE head
+
+struct Obj {
+    int ind;
+    char * f_04_name;
+    struct Obj * f_08_prev;
+    struct Obj * f_0c_next;
+    struct Obj * f_10_int_prev;
+    struct Obj * f_14_int_next;
+    short f_18_px;
+    short f_1a_py;
+    short f_1c_pz;
+    short f_1e_int_rad;
+    u_char b0;
+    u_char flagz;
+    char type_index;
+    u_char b3;
+    void * proc_func;
+    void * linkage_related;
+    void * maybe_func_on_destr;
+    int func_interact_shit;
+    void * p_owner;
+    void * p_unk38_inter_extender;
+};
+
+
+
+
+struct RayHitRes {
+    int xx;
+    int yy;
+    int zz;
+    short sx;
+    short sy;
+    short sz;
+    short pp;
+    void * ptr_a;
+    void * ptr_b;
+};
+
+
+
+
+struct DispFaceHead {
+    u_char b0;
+    u_char b1;
+    u_char b2;
+    u_char b_code;
+    u_char vinds[4];
+};
+
+
+
+struct LodEntry {
+    u_char num_v;
+    u_char num_f;
+    ushort first_v;
+    struct DispFaceHead * p_face_data;
+};
+
+
+// world piece
+
+struct SquareData {
+    uint f_00_amb_lite;
+    uint f_04_amb_lite2;
+    u_char f_08_dunno;
+    u_char f_09_col_rel;
+    ushort f_0a_col_index;
+    struct Obj * f_0c_link_objs;
+    struct Obj * f_10_link_objs2;
+    struct SquareData * f_14_another_sq;
+    struct SquareData * f_18_ptr_sq1;
+    struct SquareData * f_1c_ptr_sq2;
+    struct SquareData * f_20_ptr_sq3;
+    struct SquareData * f_24_ptr_sq4;
+    struct LodEntry f_28_lod[2];
+};
+
+
+
+
+
+
+struct WorldObjInfo {
+    int f_00_disp_rel;
+    struct WorldObjDispFaceInfo_unk_sz * f_04_ptr_display_face_info;
+    void * f_08_ptr_display_face_vert_info;
+    struct WorldObjDispVertInfo * f_0c_ptr_display_vertex_info;
+    int f10_u1;
+    struct WoColPolyInfo * f14_ptr_col_poly_info;
+    void * f18_ptr_u3;
+};
+
+
+
+
+struct WorldObjDispVertInfo {
+    int f_00_fi;
+    int f_04_num_v;
+    int f_08_v_off;
+    undefined field_0xc;
+    undefined field_0xd;
+    undefined field_0xe;
+    undefined field_0xf;
+    undefined field_0x10;
+    undefined field_0x11;
+    undefined field_0x12;
+    undefined field_0x13;
+    struct SVECTOR * f_14_ptr_verts;
+};
+
+struct WoColPolyInfo {
+    int num;
+    void * ptr4;
+    void * ptr8;
+};
+
