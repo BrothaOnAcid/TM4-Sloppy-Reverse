@@ -366,7 +366,19 @@ struct ObjExplosionShockWave {
     struct ExpDefinition * f_40_my_def;
 };
 
-
+// 0x74
+struct ObjCarpart {
+    struct SVECTOR f_00_pos;
+    struct Vec3 f_08_vc0;
+    struct Vec3 f_14_vc1;
+    int f_20_dunno;
+    struct MATRIX f_24_mtx1;
+    struct MATRIX f_44_mtx2;
+    int f_64_val;
+    void * f_68_ptr1;
+    void * f_6c_ptr_uuu;
+    void * f_70_ptr_g;
+};
 
 //------------------------------------
 
@@ -385,4 +397,13 @@ struct ObjTeleporterParamz {
     struct SVECTOR * p_dst_pos;
     struct SVECTOR * p_dst_dir;
     uint * p_clr;
+};
+
+struct ObjCarpartParamz {
+    struct VECTOR * f_00_pos;
+    struct VECTOR * f_04_unk;
+    struct MATRIX * f_08_matrix;
+    void * f_0c_ptr_cc;
+    void * f_10_ptr_uuu;
+    void * f_14_ptr_ggg;
 };
