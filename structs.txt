@@ -378,3 +378,11 @@ struct ObjAfcParamz {
     int f_10_got_lite;
 };
 
+
+struct ObjTeleporterParamz {
+    struct SVECTOR * p_pos;
+    int radius;
+    struct SVECTOR * p_dst_pos;
+    struct SVECTOR * p_dst_dir;
+    uint * p_clr;
+};
