@@ -1,7 +1,3 @@
- 
-
-
-
 void start(void);
 undefined4 f_8001008c_menu_maybe(undefined4 param_1,undefined4 param_2);
 void f_80010114_ClearVram(short param_1,short param_2,short param_3,short param_4,u_char param_5,u_char param_6,u_char param_7);
@@ -188,7 +184,7 @@ void f_800186fc_obj_try_unlink(Obj *obj);
 void f_8001873c_obj_head_try_link(Obj *obj_head);
 void f_8001877c_obj_destroy_core(Obj *oo,int mo);
 void f_80018ac0_ObjectSetOwner(undefined pp,void *ooo);
-void f_80018af4_ObjectSetPosition(byte *oo_juice,int xx,int yy,int zz);
+void f_80018af4_ObjectSetPosition(void *oo_juice,int xx,int yy,int zz);
 void * f_80018ba4_ObjectCreate(char *name,u_char flagz,...);
 int f_800191bc_obj_ext_he2(Obj *extender,int *o2);
 void f_80019278_int_ext_free(Obj *ob_juice);
@@ -396,6 +392,7 @@ undefined2 * FUN_800252b0(undefined2 *param_1,undefined4 param_2,short *param_3)
 VECTOR * f_80025340_AddVectorDaxpyVSV12(VECTOR *vv,int ss,SVECTOR *sv1,VECTOR *vs);
 SVECTOR * f_80025388_AddVectorDaxpySSS12(SVECTOR *out,int a1,SVECTOR *sv3,SVECTOR *sv4);
 SVECTOR * f_80025470_ApplyMatrixWithTranslationSV(MATRIX *mtx,SVECTOR *vv,SVECTOR *ss);
+void f_8002554c_IdentifyMatrix(MATRIX *mtx);
 void f_80025770_RotationMatrixY(int ang,MATRIX *param_2);
 MATRIX * f_800257d4_RotationMatrixZ(int ang,MATRIX *mtx);
 int f_8002592c_IntersectPolygonWithRay(int *poly,RayDef *seg,uint unk_mo,Vec3 *cp);
@@ -416,6 +413,7 @@ void f_80027398_AddVectorDaxpyVS(Vec3 *dst,SVECTOR *sv,int val3,int val4);
 void f_800274f8_SetVectorDaxpySS(SVECTOR *dst,SVECTOR *param_2,int uuu3,int uuu4);
 void f_80027590_unk_svec_lo(SVECTOR *dst,Vec3 *vc,int qqq,int mag);
 void f_80027628_SetVectorDaxpyVS(int *param_1,short *param_2,int param_3,int param_4);
+void f_800276c0_SetVectorDaxpyVV(Vec3 *v1,Vec3 *v2,int u1,int u2);
 void FUN_80027820(int *param_1,short *param_2,short *param_3,int param_4);
 uint f_800278e8_arccos(int v);
 void f_80027938_unkz(short *param_1,short *param_2,SVECTOR *dst);
@@ -431,7 +429,7 @@ void FUN_8002832c(SVECTOR *param_1,undefined4 param_2,undefined4 param_3,MATRIX 
 void FUN_800283b4(undefined4 param_1,Vec3 *param_2,undefined4 param_3);
 void FUN_80028400(short *param_1,short *param_2,undefined4 param_3,undefined4 param_4);
 void f_80028498_NormalizeMatrixWithBasis(MATRIX *mtx,int a1,int a2);
-void FUN_8002862c(MATRIX *param_1);
+void f_8002862c_NormalizeMatrix(MATRIX *mtx);
 MATRIX * f_80028688_InverseMatrix(MATRIX *m0,MATRIX *m1);
 undefined4 FUN_800286f0(int *param_1,int *param_2,int *param_3,int *param_4,int *param_5,int *param_6,int *param_7);
 int FUN_8002889c(void);
@@ -439,7 +437,7 @@ int FUN_80028920(Vec3 *param_1,SVECTOR *param_2,undefined4 param_3);
 int f_8002896c_math_ortho_help1(SVECTOR *sv,SVECTOR *sv2,SVECTOR *sv3);
 void f_800289d8_ProjOrthogonalS(int *param_1,undefined4 param_2,VECTOR *qqq);
 void f_80028a40_ProjOrthogonalSS(SVECTOR *iii,int a1,SVECTOR *dst);
-int FUN_80028ab8(int param_1,int param_2,int param_3);
+int f_80028ab8_mul64s(int aa,int bb,int q);
 int f_80028b58_DistanceApprox2d(int xx,int zz);
 int f_80028b98_DistanceApprox3d(int xx,int yy,int zz);
 int f_80028c1c_point_in_poly_he(SVECTOR *seg0,SVECTOR *seg1,SVECTOR *point,int mm);
@@ -520,7 +518,7 @@ void FUN_80031f48(void);
 void FUN_80031f7c(void);
 void FUN_80031fbc(void);
 void f_80032064_draw_prims_stuff(int param_1);
-void FUN_80032164(undefined4 param_1);
+void FUN_80032164(int param_1);
 void f_800321b0_load_image_wrp(RECT *rect,uint *param_2);
 void FUN_800321d8(RECT *param_1);
 void FUN_80032290(int param_1);
@@ -988,3 +986,17 @@ int f_destry_802134f0_DestroyableConstructor(ObjDestroyable *de,ObjDestructableP
 int f_destry_8021351c_DestroyableInstanceConstructor(ObjDestroyable *de,RegDir *rg);
 void f_destry_80213598_DestroyableProcess(ObjDestroyable *de);
 void f_destry_802135b8_DestroyableDestructor(ObjDestroyable *de);
+void f_frag_80214000_OSRegisterCarWeapon(void);
+void f_frag_80214030_OSRegisterBuildMatrixFunc(void);
+void f_frag_80214060_OSRegisterAi(void);
+void f_frag_802140d8_OSRegisterCarAi(void);
+void f_frag_8021413c_OSRegisterSoundEmitter(void);
+void f_frag_8021418c_OSRegisterCarPhysics(void);
+void f_frag_8021422c_OSRegisterCarDisplay(void);
+void f_frag_8021425c_OSRegisterCar(void);
+void f_frag_80214298_OSRegisterAnimInfo(void);
+void f_frag_802142c8_OSRegisterExplosion(void);
+int f_frag_802142f8_FragmentConstructor(ObjFragment *frg,ObjFragmentParamz *prm);
+void f_frag_80214b30_FragmentProcess(ObjFragment *frg);
+void f_frag_80214d48_FragmentDisplay(ObjFragment *frg,int param_2,uint **param_3,uint *param_4,MATRIX *mtx);
+MATRIX * f_frag_80215174_MulMatrix(MATRIX *m0,MATRIX *m1);
