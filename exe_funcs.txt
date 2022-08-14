@@ -1000,3 +1000,9 @@ int f_frag_802142f8_FragmentConstructor(ObjFragment *frg,ObjFragmentParamz *prm)
 void f_frag_80214b30_FragmentProcess(ObjFragment *frg);
 void f_frag_80214d48_FragmentDisplay(ObjFragment *frg,int param_2,uint **param_3,uint *param_4,MATRIX *mtx);
 MATRIX * f_frag_80215174_MulMatrix(MATRIX *m0,MATRIX *m1);
+void f_carprt_80216000_OSRegisterCarWeapon(void);
+void f_carprt_8021622c_OSRegisterCarDisplay(void);
+int f_carprt_802162f8_CarpartConstructor(ObjCarpart *cp,ObjCarpartParamz *prm);
+void f_carprt_80216570_CarpartProcess(ObjCarpart *cp);
+void f_carprt_8021675c_CarpartDisplay(ObjCarpart *cp,int param_2,uint **param_3,uint *param_4,MATRIX *mtx);
+MATRIX * f_carprt_80216b04_MulMatrix(MATRIX *m0,MATRIX *m1);
