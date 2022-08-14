@@ -5,6 +5,17 @@ struct MATRIX {
     long t[3];
 };
 
+struct Vec3 {
+    int x;
+    int y;
+    int z;
+};
+
+struct SVec3 {
+    short x;
+    short y;
+    short z;
+};
 
 
 
@@ -228,34 +239,14 @@ struct ObjCamera {
 
 // 0x30   - glow / flares
 struct ObjAfc {
-    short s0_size;
-    short s2_size;
-    short s4;
-    short rot;
-    uint clr1;
-    uint clr2;
-    short s10;
-    short s12;
-    short s14;
-    undefined field_0x16;
-    undefined field_0x17;
-    short s18;
-    short s1a;
-    short s1c;
-    undefined field_0x1e;
-    undefined field_0x1f;
-    short s20;
-    short s22;
-    short s24;
-    undefined field_0x26;
-    undefined field_0x27;
-    short s28;
-    short s2a;
-    short s2c;
-    undefined field_0x2e;
-    undefined field_0x2f;
+    short f_00_sz;
+    short f_02_sz2;
+    short f_04_rot_z;
+    short f_06_rot;
+    byte f_08_clr[4];
+    byte f_0c_clr2[4];
+    struct SVECTOR f_10_maybe_verts[4];
 };
-
 
 // 0x40
 struct ObjTeleporter {
@@ -376,4 +367,14 @@ struct ObjExplosionShockWave {
 };
 
 
+
+//------------------------------------
+
+struct ObjAfcParamz {
+    struct SVec3 * f_00_ptr_pos;
+    uint * f_04_p_clr;
+    int f_08_rot;
+    int f_0c_sz;
+    int f_10_got_lite;
+};
 
