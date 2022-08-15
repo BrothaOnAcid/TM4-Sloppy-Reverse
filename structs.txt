@@ -60,6 +60,7 @@ struct ObjTyInfo {
 
 // in-game object INSTANCE head
 
+// 0x3c
 struct Obj {
     int ind;
     char * f_04_name;
@@ -300,8 +301,8 @@ struct ObjFragment {
     struct Vec3 f_08_vc;
     struct Vec3 f_14_some_vec;
     int f_20_unk1;
-    struct SVECTOR f_24_maybe_verts[4];
-    struct MATRIX f_44_mtx;
+    struct MATRIX f_24_mtx1;
+    struct MATRIX f_44_mtx2;
     int f_64_raycast_delay;
     int f_68_u1;
     int f_6c;
@@ -380,6 +381,34 @@ struct ObjCarpart {
     void * f_70_ptr_g;
 };
 
+// 0x2DC
+struct ObjTrain {
+    int f_00_pathing_speed;
+    struct PathingInfo f_04_pathing;
+    int f_88_hp;
+    int f_8c_dmg;
+    struct DaBox f_90_box;
+    struct InterList f_2d8_int_list_shit;
+};
+
+// 0x2F4
+struct ObjUfo {
+    int f_000_speed;
+    struct PathingInfo f_004_pathing;
+    int f_088_hp;
+    struct DaBox f_08c_box;
+    int f_2d4_beam_force;
+    int f_2d8_beam_damp;
+    struct ObjCar * f_2dc_holding_car;
+    struct SVECTOR * f_2e0_pick_point_p;
+    int f_2e4_pick_radius;
+    void * f_2e8_drop_point;
+    int f_2ec_drop_radius;
+    void * f_2f0_snd_emit_hold_hum;
+};
+
+
+
 //------------------------------------
 
 struct ObjBulletParamz {
@@ -426,4 +455,41 @@ struct ObjExplosionShockWaveParamz {
     struct SVECTOR * f_08_vel;
     short f_0c_ptr_sh;
 };
+
+
+
+// 0x84  follow-path  logic 
+struct PathingInfo {
+    int f_00_pt_type_maybe;
+    void * f_04_pts;
+    int f_08_num;
+    int f_0c_index;
+    int f_10_index2;
+    void * f_14_allocated;
+    int nnn;
+    int val;
+    undefined field_0x20;
+    undefined field_0x21;
+    undefined field_0x22;
+    undefined field_0x23;
+    int f_24_unk;
+    undefined field_0x28;
+    undefined field_0x29;
+    undefined field_0x2a;
+    undefined field_0x2b;
+    int unk_v;
+    int f_30_un;
+    int f_34_dunno;
+    int f_38_u;
+    undefined field_0x3c;
+    undefined field_0x3d;
+    undefined field_0x3e;
+    undefined field_0x3f;
+    struct MATRIX f_40_mtx_a;
+    struct MATRIX f_60_mtx_b;
+    int f_80;
+};
+
+
+
 
