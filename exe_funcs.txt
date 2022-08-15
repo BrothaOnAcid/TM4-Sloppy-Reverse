@@ -636,7 +636,7 @@ undefined4 FUN_80038db0(byte *param_1,int param_2,int param_3,uint *param_4,uint
 void FUN_80039064(SVECTOR *param_1,uint param_2,uint *param_3,int param_4,uint **param_5,int param_6,uint *param_7,int param_8);
 void FUN_80039274(SVECTOR *param_1,uint *param_2,int param_3,uint **param_4,int param_5,uint *param_6,int param_7);
 void FUN_800394dc(SVECTOR *param_1,uint param_2,int param_3,uint **param_4,uint param_5,uint *param_6,int param_7);
-void FUN_80039764(SVECTOR *param_1,uint *param_2,uint param_3,int param_4,int param_5,uint **param_6,uint *param_7,int param_8);
+void f_80039764_DisplayAnimCard(SVECTOR *verts,void *ptr_tex_stuff,uint clr,int param_4,int param_5,uint **ret_z_maybe,uint *param_7,int param_8);
 void FUN_80039924(SVECTOR *param_1,uint *param_2,uint *param_3,int param_4,int param_5,uint **param_6,uint *param_7,int param_8);
 byte * f_80039ae8_GetTexBox(char *param_1,RegDir *param_2,undefined4 param_3);
 byte * f_80039bac_GetRegData(char *nam,RegDir *rg,RegDir *rg2,int param_4);
@@ -1022,4 +1022,15 @@ void f_bullet_80218564_BulletProjectileDestructor(BulletProjectile *bb);
 int f_bullet_80218584_BulletProjectileProcess(BulletProjectile *proj,void *host_obj,int dmg);
 void f_bullet_802189fc_BulletProcess(ObjBullet *bu);
 void f_bullet_80218b70_BulletDisplay(ObjBullet *bu,int unk1,uint **unku,uint *unk2);
-
+void f_expl_8021a000_OSRegisterSoundEmitter(void);
+ExpDefinition * f_expl_8021a3e8_find_def_by_name(char *ss);
+void f_expl_8021a488_ExplosionShockWaveClassConstructor(RegDir *rgrg);
+void f_expl_8021a9c0_ExplosionShockWaveClassDestructor(void);
+int f_expl_8021a9e8_ExplosionShockWaveConstructor(ObjExplosionShockWave *ex,ObjExplosionShockWaveParamz *prmz);
+void f_expl_8021ac80_ExplosionShockWaveProcess(ObjExplosionShockWave *ex);
+void f_expl_8021ae98_ExplosionShockWaveDestructor(ObjExplosionShockWave *ex);
+void f_expl_8021aecc_ExplosionShockWaveDisplay(ObjExplosionShockWave *ex,undefined4 param_2,undefined4 param_3,undefined4 param_4,MATRIX *mtx);
+void f_expl_8021b080_disp_he1(ObjExplosionShockWave *ex,int param_2,uint **param_3,uint *param_4);
+void f_expl_8021b368_proc_help_raycasts(ObjExplosionShockWave *ex);
+MATRIX * f_expl_8021b5ec_RotMatrixX(long r,MATRIX *m);
+void f_expl_8021b78c_RotTrans(SVECTOR *v0,VECTOR *v1,long *flag);
