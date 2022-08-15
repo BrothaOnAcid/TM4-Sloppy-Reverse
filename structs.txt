@@ -419,3 +419,11 @@ struct ObjCarpartParamz {
     void * f_10_ptr_uuu;
     void * f_14_ptr_ggg;
 };
+
+struct ObjExplosionShockWaveParamz {
+    char * f_00_name;
+    struct SVECTOR * f_04_pos;
+    struct SVECTOR * f_08_vel;
+    short f_0c_ptr_sh;
+};
+
