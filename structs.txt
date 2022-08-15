@@ -382,6 +382,12 @@ struct ObjCarpart {
 
 //------------------------------------
 
+
+struct ObjCameraParamz {
+    void * f_00_trg_obj;
+};
+
+
 struct ObjAfcParamz {
     struct SVec3 * f_00_ptr_pos;
     uint * f_04_p_clr;
