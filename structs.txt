@@ -382,6 +382,12 @@ struct ObjCarpart {
 
 //------------------------------------
 
+struct ObjBulletParamz {
+    struct SVECTOR * f_00_maybe_pos;
+    struct SVECTOR * f_04_vec_or_vel;
+    int f_08_dunno;
+};
+
 
 struct ObjCameraParamz {
     void * f_00_trg_obj;
