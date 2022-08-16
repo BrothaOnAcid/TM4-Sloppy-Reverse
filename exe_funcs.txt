@@ -1082,7 +1082,7 @@ void f_w_neon_8023156c_TrainDisplay(ObjTrain *tra,void *param_2,uint **param_3,u
 int f_w_neon_802315f8_InteractCarWithTrain(ObjCar *car,ObjTrain *tra);
 int f_w_neon_802318a0_InteractTrainWithBullet(ObjTrain *tra,ObjBullet *bu);
 int f_w_neon_80231930_InteractTrainWithExplosionShockWave(ObjTrain *tra,ObjExplosionShockWave *ex);
-void f_w_neon_802319a8_TrainCameraProcess(ObjTrain *tra,byte *dunno);
+void f_w_neon_802319a8_TrainCameraProcess(ObjTrain *tra,ObjCamera *cam);
 void f_w_neon_802319f0_UfoClassConstructor(RegDir *rg);
 void f_w_neon_80231a6c_ufo_snd_rel(ObjUfo *ufo);
 void f_w_neon_80231abc_UfoProcess(ObjUfo *ufo);
@@ -1093,18 +1093,18 @@ void f_w_neon_802328a8_UfoDisplay(ObjUfo *ufo,void *param_2,uint **param_3,undef
 int f_w_neon_80232998_InteractUfoWithBullet(ObjUfo *ufo,ObjBullet *bu);
 int f_w_neon_802329c8_InteractUfoWithWeaponProjectile(ObjUfo *ufo,ObjWeaponProjectile *proj);
 int f_w_neon_802329f8_UfoApplyDamage(ObjUfo *ufo,undefined4 param_2,undefined4 param_3);
-void f_w_neon_80232a60_UfoCameraProcess(ObjUfo *ufo,byte *dunno);
+void f_w_neon_80232a60_UfoCameraProcess(ObjUfo *ufo,ObjCamera *cam);
 void f_w_yard_80238000_OSRegisterCarWeapon(void);
 void f_w_yard_80238410_CraneClassConstructor(RegDir *rg);
-int f_w_yard_80238510_CraneControlConstructor(CraneControl *cc,undefined4 *param_2);
-void f_w_yard_8023856c_CraneControlDestructor(CraneControl *cc);
-int f_w_yard_8023858c_InteractCraneControlWithOtherObject(CraneControl *cc,void *other_obj_juice);
+int f_w_yard_80238510_CraneControlConstructor(ObjCraneControl *cc,ObjCraneControlParamz *prmz);
+void f_w_yard_8023856c_CraneControlDestructor(ObjCraneControl *cc);
+int f_w_yard_8023858c_InteractCraneControlWithOtherObject(ObjCraneControl *cc,void *other_obj_juice);
 int f_w_yard_802386a4_CraneInstanceConstructor(ObjCrane *cra,RegDir *rg);
 void f_w_yard_802388a8_cra_help1(ObjCrane *cra);
 void f_w_yard_80238988_crane_on_destr(ObjCrane *cra);
 void f_w_yard_80238a94_CraneDestructor(ObjCrane *cra);
 void f_w_yard_80238ad0_CraneProcess(ObjCrane *cra);
-void f_w_yard_802393f0_CraneCameraProcess(ObjCrane *cra,MATRIX *out);
+void f_w_yard_802393f0_CraneCameraProcess(ObjCrane *cra,ObjCamera *out);
 void f_w_yard_80239490_CraneConeDisplay(ObjCrane *cra,int param_2,uint **param_3,uint *param_4,undefined4 param_5,int param_6,SVECTOR *pt_unk,int param_8);
 void f_w_yard_80239aa4_CraneMarkerDisplay(ObjCrane *cra,int param_2,uint **param_3,uint *param_4,MATRIX *mtx,short maybe_width,SVECTOR *sv,int param_8);
 void f_w_yard_80239dcc_CraneDisplay(ObjCrane *cra,void *param_2,uint **param_3,uint *param_4,MATRIX *param_5);
@@ -1112,4 +1112,5 @@ int f_w_yard_80239fa0_DeathPointInstanceConstructor(ObjDeathPoint *dp,RegDir *rg
 int f_w_yard_8023a03c_InteractCarWithDeathPoint(ObjCar *car,ObjDeathPoint *dp);
 void f_w_yard_8023a098_DeathPointProcess(ObjDeathPoint *dp);
 void f_w_yard_8023a0b8_DeathPointDestructor(ObjDeathPoint *dp);
-void RotTrans(SVECTOR *v0,VECTOR *v1,long *flag);
+void f_w_yard_8023a0d8_RotTrans(SVECTOR *v0,VECTOR *v1,long *flag);
+
