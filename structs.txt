@@ -407,9 +407,49 @@ struct ObjUfo {
     void * f_2f0_snd_emit_hold_hum;
 };
 
+// 0x10
+struct ObjCraneControl {
+    int f_00_unkz;
+    struct ObjCar * f_04_operating_car;
+    int f_08_val;
+    struct InterList f_0c_inter_list;
+};
+
+// 0x60
+struct ObjCrane {
+    struct MATRIX f_00_mtx;
+    int f_20_unk2;
+    struct SVECTOR f_24_pivot;
+    int f_2c_rot_speed;
+    struct SVECTOR * f_30_cam_related_bigger_than_svec;
+    struct SVECTOR f_34_sv;
+    int f_3c_magnet_radius;
+    int f_40_magnet_force;
+    int f_44_magnet_damp;
+    struct ObjCar * f_48_maybe_victim;
+    int f_4c_unks;
+    int f_50_unk5;
+    struct ObjCraneControl * f_54_my_control;
+    void * f_58_some_obj;
+    void * f_5c_another_obj;
+};
+
+// 0x04
+struct ObjDeathPoint {
+    struct InterList f_00_inter_list;
+};
 
 
 //------------------------------------
+
+struct ObjCraneControlParamz {
+    int f_00_dunno;
+    int f_04_x;
+    int f_08_y;
+    int f_0c_z;
+    int f_10_radius;
+};
+
 
 struct ObjBulletParamz {
     struct SVECTOR * f_00_maybe_pos;
