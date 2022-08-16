@@ -268,7 +268,7 @@ struct ObjPowerup {
     char * f_00_nam;
     ushort f_04_amount;
     short f_06_unk;
-    ushort f_08_unk2;
+    ushort f_08_rot_y;
     short f_0a_unk;
     short f_0c_unk_c;
     short f_0e_maybe_rot_y;
