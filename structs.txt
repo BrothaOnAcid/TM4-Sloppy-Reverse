@@ -439,6 +439,18 @@ struct ObjDeathPoint {
     struct InterList f_00_inter_list;
 };
 
+// 0x2C
+struct ObjSoundEmitter {
+    uint f_00_flagz;
+    struct SVECTOR f_04_mb_pos0;
+    struct SVECTOR f_0c_mb_pos1;
+    struct SVECTOR f_14_mb_pos2;
+    int f_1c_val;
+    int f_20_prog_id;
+    int f_24_cnt_unk;
+    void * f_28_allocated_attrs;
+};
+
 
 //------------------------------------
 
