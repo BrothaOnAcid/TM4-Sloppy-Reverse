@@ -452,6 +452,21 @@ struct ObjSoundEmitter {
 };
 
 
+// 0x8
+struct ObjConveyer {
+    struct WorldObjInfo * f_00_ptr_wo;
+    int f_04_speed;
+};
+
+// 0x14
+struct ObjJumppad {
+    struct SVECTOR f_00_dir;
+    int f_08_accel;
+    struct InterList f_0c_inter_list;
+    int f_10_one_way;
+};
+
+
 //------------------------------------
 
 struct ObjCraneControlParamz {
