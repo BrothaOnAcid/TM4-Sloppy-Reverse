@@ -559,4 +559,22 @@ struct PathingInfo {
 
 
 
+// 0x40
+struct CarCrusher {
+    undefined field_0x0;
+    undefined field_0x1;
+    undefined field_0x2;
+    undefined field_0x3;
+    int f_04_cnt_u;
+    int f_08_unk1;
+    int f_0c_dun;
+    struct MATRIX f_10_mtx;
+    int f_28_hh;
+    int f_2c_zz;
+    int f_30_dunno1;
+    int f_34_dunno2;
+    struct ObjCar * f_38_victim;
+    void * f_3c_snd_emitter_special;
+};
+
 
