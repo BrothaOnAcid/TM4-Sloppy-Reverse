@@ -100,18 +100,6 @@ struct RayHitRes {
 };
 
 
-
-
-struct DispFaceHead {
-    u_char b0;
-    u_char b1;
-    u_char b2;
-    u_char b_code;
-    u_char vinds[4];
-};
-
-
-
 struct LodEntry {
     u_char num_v;
     u_char num_f;
@@ -119,6 +107,13 @@ struct LodEntry {
     struct DispFaceHead * p_face_data;
 };
 
+struct DispFaceHead {
+    u_char rr;
+    u_char gg;
+    u_char bb;
+    u_char b_code;
+    u_char vinds[4];
+};
 
 // world piece
 
@@ -189,6 +184,15 @@ struct InterList {
     struct InterListElem * p_start;
 };
 
+struct CarWpnEntry {
+    short s0;
+    short s2;
+    short f_4_sh1;
+    short f_6_sh2;
+    uint i8_cool;
+    void * func_launch;
+    void * ptr_kind;
+};
 
 
 //---------------------------------
@@ -226,6 +230,268 @@ struct ObjBullet {
     struct BulletProjectile f0_proj;
     short f46_dmg;
 };
+
+
+
+struct ObjWeaponProjectile {
+    struct BulletProjectile f_00_projectile;
+    undefined field_0x46;
+    undefined field_0x47;
+    undefined field_0x48;
+    undefined field_0x49;
+    short f_4a_col_radius;
+    undefined field_0x4c;
+    undefined field_0x4d;
+    short f_4e_tm_unk1;
+    int f_50_time_related;
+    struct MATRIX f_54_mtx;
+    undefined field_0x6c;
+    undefined field_0x6d;
+    undefined field_0x6e;
+    undefined field_0x6f;
+    undefined field_0x70;
+    undefined field_0x71;
+    undefined field_0x72;
+    undefined field_0x73;
+    int f_74_unk_cnt;
+    struct ObjCar * f_78_ptr_owner;
+    char * f_7c_dunno_car_name_str;
+    void * f_80_ptr_juice_maybe;
+    void * f_84_func_process;
+    void * f_88_func_display;
+    void * f_8c_func_on_destroy;
+    undefined field_0x90;
+    undefined field_0x91;
+    undefined field_0x92;
+    undefined field_0x93;
+    undefined field_0x94;
+    undefined field_0x95;
+    undefined field_0x96;
+    undefined field_0x97;
+    undefined field_0x98;
+    undefined field_0x99;
+    undefined field_0x9a;
+    undefined field_0x9b;
+    undefined field_0x9c;
+    undefined field_0x9d;
+    undefined field_0x9e;
+    undefined field_0x9f;
+    undefined field_0xa0;
+    undefined field_0xa1;
+    undefined field_0xa2;
+    undefined field_0xa3;
+    undefined field_0xa4;
+    undefined field_0xa5;
+    undefined field_0xa6;
+    undefined field_0xa7;
+    undefined field_0xa8;
+    undefined field_0xa9;
+    undefined field_0xaa;
+    undefined field_0xab;
+    undefined field_0xac;
+    undefined field_0xad;
+    undefined field_0xae;
+    undefined field_0xaf;
+    undefined field_0xb0;
+    undefined field_0xb1;
+    undefined field_0xb2;
+    undefined field_0xb3;
+    undefined field_0xb4;
+    undefined field_0xb5;
+    undefined field_0xb6;
+    undefined field_0xb7;
+    undefined field_0xb8;
+    undefined field_0xb9;
+    undefined field_0xba;
+    undefined field_0xbb;
+    undefined field_0xbc;
+    undefined field_0xbd;
+    undefined field_0xbe;
+    undefined field_0xbf;
+    undefined field_0xc0;
+    undefined field_0xc1;
+    undefined field_0xc2;
+    undefined field_0xc3;
+    undefined field_0xc4;
+    undefined field_0xc5;
+    undefined field_0xc6;
+    undefined field_0xc7;
+    undefined field_0xc8;
+    undefined field_0xc9;
+    undefined field_0xca;
+    undefined field_0xcb;
+    undefined field_0xcc;
+    undefined field_0xcd;
+    undefined field_0xce;
+    undefined field_0xcf;
+    undefined field_0xd0;
+    undefined field_0xd1;
+    undefined field_0xd2;
+    undefined field_0xd3;
+    undefined field_0xd4;
+    undefined field_0xd5;
+    undefined field_0xd6;
+    undefined field_0xd7;
+    undefined field_0xd8;
+    undefined field_0xd9;
+    undefined field_0xda;
+    undefined field_0xdb;
+    undefined field_0xdc;
+    undefined field_0xdd;
+    undefined field_0xde;
+    undefined field_0xdf;
+    undefined field_0xe0;
+    undefined field_0xe1;
+    undefined field_0xe2;
+    undefined field_0xe3;
+    undefined field_0xe4;
+    undefined field_0xe5;
+    undefined field_0xe6;
+    undefined field_0xe7;
+    undefined field_0xe8;
+    undefined field_0xe9;
+    undefined field_0xea;
+    undefined field_0xeb;
+    undefined field_0xec;
+    undefined field_0xed;
+    undefined field_0xee;
+    undefined field_0xef;
+    undefined field_0xf0;
+    undefined field_0xf1;
+    undefined field_0xf2;
+    undefined field_0xf3;
+    undefined field_0xf4;
+    undefined field_0xf5;
+    undefined field_0xf6;
+    undefined field_0xf7;
+    undefined field_0xf8;
+    undefined field_0xf9;
+    undefined field_0xfa;
+    undefined field_0xfb;
+    undefined field_0xfc;
+    undefined field_0xfd;
+    undefined field_0xfe;
+    undefined field_0xff;
+    undefined field_0x100;
+    undefined field_0x101;
+    undefined field_0x102;
+    undefined field_0x103;
+    undefined field_0x104;
+    undefined field_0x105;
+    undefined field_0x106;
+    undefined field_0x107;
+    undefined field_0x108;
+    undefined field_0x109;
+    undefined field_0x10a;
+    undefined field_0x10b;
+    undefined field_0x10c;
+    undefined field_0x10d;
+    undefined field_0x10e;
+    undefined field_0x10f;
+    undefined field_0x110;
+    undefined field_0x111;
+    undefined field_0x112;
+    undefined field_0x113;
+    undefined field_0x114;
+    undefined field_0x115;
+    undefined field_0x116;
+    undefined field_0x117;
+    undefined field_0x118;
+    undefined field_0x119;
+    undefined field_0x11a;
+    undefined field_0x11b;
+    undefined field_0x11c;
+    undefined field_0x11d;
+    undefined field_0x11e;
+    undefined field_0x11f;
+    undefined field_0x120;
+    undefined field_0x121;
+    undefined field_0x122;
+    undefined field_0x123;
+    undefined field_0x124;
+    undefined field_0x125;
+    undefined field_0x126;
+    undefined field_0x127;
+    undefined field_0x128;
+    undefined field_0x129;
+    undefined field_0x12a;
+    undefined field_0x12b;
+    undefined field_0x12c;
+    undefined field_0x12d;
+    undefined field_0x12e;
+    undefined field_0x12f;
+    undefined field_0x130;
+    undefined field_0x131;
+    undefined field_0x132;
+    undefined field_0x133;
+    undefined field_0x134;
+    undefined field_0x135;
+    undefined field_0x136;
+    undefined field_0x137;
+    undefined field_0x138;
+    undefined field_0x139;
+    undefined field_0x13a;
+    undefined field_0x13b;
+    undefined field_0x13c;
+    undefined field_0x13d;
+    undefined field_0x13e;
+    undefined field_0x13f;
+    undefined field_0x140;
+    undefined field_0x141;
+    undefined field_0x142;
+    undefined field_0x143;
+    undefined field_0x144;
+    undefined field_0x145;
+    undefined field_0x146;
+    undefined field_0x147;
+    undefined field_0x148;
+    undefined field_0x149;
+    undefined field_0x14a;
+    undefined field_0x14b;
+    undefined field_0x14c;
+    undefined field_0x14d;
+    undefined field_0x14e;
+    undefined field_0x14f;
+    short f_150_dun;
+    short f_152_dun2;
+    byte f_154;
+    byte f_155;
+    undefined field_0x156;
+    undefined field_0x157;
+    byte f_158_rr;
+    byte f_159_gg;
+    byte f_15a_bb;
+    byte f_15b_derp;
+    undefined field_0x15c;
+    undefined field_0x15d;
+    undefined field_0x15e;
+    undefined field_0x15f;
+    short f_160_s10;
+    short f_162_s12;
+    void * f_164_some_obj;
+    ushort f_168_s1;
+    ushort f_16a_s2;
+};
+
+
+struct ObjWeaponBomb {
+    void * f_00_ptr_data;
+    struct MATRIX f_04_mtx;
+    undefined field_0x1c;
+    undefined field_0x1d;
+    undefined field_0x1e;
+    undefined field_0x1f;
+    undefined field_0x20;
+    undefined field_0x21;
+    undefined field_0x22;
+    undefined field_0x23;
+    struct ObjAfc * f_24_my_afc;
+    int f_28_iii;
+    short f_2c_s1;
+    short f_2e_s2;
+};
+
+
 
 
 // 0x6C
